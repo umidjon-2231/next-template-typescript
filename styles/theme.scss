@@ -1,0 +1,27 @@
+@import "variables.module";
+
+:root {
+  @each $name, $value in $common {
+    --#{$name}: #{$value}
+  }
+  @each $name, $value in $light-theme {
+    --#{$name}: #{$value}
+  }
+  --toastify-color-dark: #{map-get($dark-theme, "bg-color")};
+  --toastify-text-color-dark: #{map-get($dark-theme, "font-color")};
+  --toastify-color-light: #{map-get($light-theme, "bg-color")};
+  --toastify-text-color-light: #{map-get($light-theme, "font-color")};
+  --toastify-spinner-color: #{map-get($common, "main-color")};
+  --toastify-spinner-color-empty-area: transparent!important;
+}
+
+.dark {
+  @each $name, $value in $dark-theme {
+    --#{$name}: #{$value}
+  }
+}
+
+
+.Toastify__toast-theme--light, .Toastify__toast-theme--dark {
+  box-shadow: var(--shadow);
+}

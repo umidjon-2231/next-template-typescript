@@ -1,0 +1,16 @@
+{
+  "short_name": "Test",
+  "lang": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#f1f1f1",
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "unlimitedStorage"
+  ],
+  "optional_permissions": [
+    "unlimitedStorage"
+  ]
+}

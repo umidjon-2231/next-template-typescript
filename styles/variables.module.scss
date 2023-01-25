@@ -1,0 +1,35 @@
+$common: (
+        "main-color": #000000,
+        "active-text-color": #fff,
+        "opacity-main-color": #0000007F,
+);
+$light-theme: (
+        "font-color": black,
+        "font-color-rgb": "0,0,0",
+        "bg-color": #f1f1f1,
+        "muted-color": gray,
+        "shadow": 0 0 4px 1px rgba(2, 0, 0, 0.4),
+        "border-color": #fff
+);
+$dark-theme: (
+        'font-color': white,
+        'font-color-rgb': "255, 255, 255",
+        "bg-color": #212529,
+        "muted-color": rgba(33, 37, 41, 0.4),
+        "shadow": 0 0 4px 1px black,
+        "border-color": #000
+);
+
+:export {
+  @each $name, $value in $common {
+    #{$name}: $value
+  }
+  @each $name, $value in $light-theme {
+    light-#{$name}: $value
+  }
+  @each $name, $value in $dark-theme {
+    dark-#{$name}: $value
+  }
+}
+
+
